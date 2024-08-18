@@ -48,11 +48,11 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData }) => {
       >
         <p className="font-black text-4xl">
           <span className="text-[--orange]">&lt;</span>
-          {skillsData[0].skillsTitle}
+          {skillsData.skillsTitle}
           <span className="text-[--orange]">/&gt;</span>
         </p>
       </div>
-      {skillsData[0].skills.map((skill, index) => (
+      {skillsData.skills.map((skill, index) => (
         <div
           key={index}
           className={

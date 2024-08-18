@@ -1,11 +1,7 @@
 import React from "react";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useSectionInView } from "../assets/lib/hooks";
-import {
-  skillsDataCMS,
-  skillsDataDesign,
-  skillsDataWeb,
-} from "../assets/lib/data";
+import { skillsDataWeb } from "../assets/lib/data";
 
 import SkillSection from "./SkillSection";
 
@@ -27,12 +23,14 @@ const TechStack: React.FC = () => {
           <h2>My TechStack and Skills</h2>
         </div>
         <div className="flex gap-40 justify-center max-lg:flex-col">
-          <div className="w-1/3 max-lg:w-full">
-            <SkillSection skillsData={skillsDataWeb} />
-          </div>
-          <div className="flex flex-col h-[inherit]  justify-around max-lg:gap-40">
-            <SkillSection skillsData={skillsDataDesign} />
-            <SkillSection skillsData={skillsDataCMS} />
+          <div className="w-[77.33333%] max-lg:w-full">
+            {skillsDataWeb.map((skillData, index) => {
+              return (
+                <div key={`${skillData.skillsTitle}-${index}`}>
+                  <SkillSection skillsData={skillData} />
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

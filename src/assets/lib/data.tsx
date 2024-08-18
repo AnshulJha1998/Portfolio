@@ -1,4 +1,3 @@
-import adobexdicon from "../../assets/icons/adobexdicon.svg";
 import canvaicon from "../../assets/icons/canvaicon.svg";
 import figmaicon from "../../assets/icons/figmaicon.svg";
 import htmlicon from "../../assets/icons/htmlicon.svg";
@@ -20,9 +19,6 @@ import spotifyicon from "../../assets/icons/spotifyicon.svg";
 import netlifyicon from "../../assets/icons/netlifyicon.svg";
 import rendericon from "../../assets/icons/rendericon.svg";
 import jwticon from "../../assets/icons/jwticon.svg";
-import wordpressicon from "../../assets/icons/wordpressicon.svg";
-import shopifyicon from "../../assets/icons/shopifyicon.svg";
-import webflowicon from "../../assets/icons/webflowicon.svg";
 import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
@@ -39,11 +35,11 @@ import Privacy from "../../components/Privacy";
 
 export const headerIntroData = {
   title: {
-    en: "Hi, I'm Alpay",
+    en: "Hi, I'm Anshul",
   },
   subtitle: "Fullstack Developer ",
   description: {
-    en: "I'm Alpay, a fullstack developer with the goal of advancing my career and participating in inspiring projects. Here I present my work and my passion for web development. Let's shape digital solutions together and shape the future!",
+    en: "Accomplished full-stack developer with 3 years of experience, specializing in the MERN stack and Java Spring Boot, delivering robust and scalable web applications across diverse domains.",
   },
   buttons: [
     {
@@ -165,7 +161,7 @@ export const liveTickerData = {
 
 export const skillsDataWeb = [
   {
-    skillsTitle: "WebDevelopment",
+    skillsTitle: "Front-End",
     skills: [
       {
         title: "HTML",
@@ -198,16 +194,16 @@ export const skillsDataWeb = [
         color: "#61DAFB",
       },
       {
-        title: "Next.js",
-        hash: "#Next.js",
-        icon: [nextjsicon, nextjsiconwhite],
-        color: ["#000000", "#FFFFFF"],
-      },
-      {
         title: "Node.js",
         hash: "#Node.js",
         icon: nodejsicon,
         color: "#339933",
+      },
+      {
+        title: "Next.js",
+        hash: "#Next.js",
+        icon: [nextjsicon, nextjsiconwhite],
+        color: ["#000000", "#FFFFFF"],
       },
       {
         title: "Tailwind",
@@ -241,45 +237,45 @@ export const skillsDataWeb = [
       },
     ],
   },
-] as const;
-
-export const skillsDataDesign = [
   {
-    skillsTitle: "Design",
-    skills: [
-      { title: "Figma", hash: "#Figma", icon: figmaicon, color: "#F24E1E" },
-      {
-        title: "Adobe XD",
-        hash: "#Adobe XD",
-        icon: adobexdicon,
-        color: "#FF61F6",
-      },
-      { title: "Canva", hash: "#Canva", icon: canvaicon, color: "#00C4CC" },
-    ],
-  },
-] as const;
-
-export const skillsDataCMS = [
-  {
-    skillsTitle: "CMS",
+    skillsTitle: "Back-End",
     skills: [
       {
-        title: "WordPress",
-        hash: "#WordPress",
-        icon: wordpressicon,
-        color: "#21759B",
+        title: "Node.js",
+        hash: "#Node.js",
+        icon: nodejsicon,
+        color: "#339933",
       },
       {
-        title: "Shopify",
-        hash: "#Shopify",
-        icon: shopifyicon,
-        color: "#7AB55C",
+        title: "MongoDB",
+        hash: "#MongoDB",
+        icon: mongodbicon,
+        color: "#449C45",
       },
       {
-        title: "Webflow",
-        hash: "#Webflow",
-        icon: webflowicon,
-        color: "#4353FF",
+        title: "MYSQL",
+        hash: "#MYSQL",
+        icon: mongodbicon,
+        color: "#449C45",
+      },
+
+      {
+        title: "Express",
+        hash: "#Express",
+        icon: [expressicon, expressiconwhite],
+        color: ["#000000", "#FFFFFF"],
+      },
+      {
+        title: "Java",
+        hash: "#Java",
+        icon: [expressicon, expressiconwhite],
+        color: ["#000000", "#FFFFFF"],
+      },
+      {
+        title: "Spring Boot",
+        hash: "#Spring Boot",
+        icon: [expressicon, expressiconwhite],
+        color: ["#000000", "#FFFFFF"],
       },
     ],
   },
@@ -376,17 +372,6 @@ export const contactData = {
       },
       pattern: "[@]{4}",
     },
-    {
-      name: "subject",
-      placeholder: {
-        en: "Your Subject",
-      },
-      type: "text",
-      validation: {
-        en: "Please fill in your subject",
-      },
-      pattern: "{10}",
-    },
   ],
   textarea: {
     placeholder: {
@@ -410,14 +395,6 @@ export const contactData = {
     main: "main-btn",
     second: "secondary-btn",
     icon: "white",
-  },
-  privacyOptIn: {
-    checkbox: {
-      en: "I agree that Alpay may use my personal data (name and e-mail address) to contact me.",
-    },
-    description: {
-      en: "By submitting this request, you acknowledge that you have read the Private Policy",
-    },
   },
 } as const;
 

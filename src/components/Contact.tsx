@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from "./Button";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import { Highlight, themes } from "prism-react-renderer";
 import { contactData, toastMessages } from "../assets/lib/data.tsx";
 import { useSectionInView } from "../assets/lib/hooks";
@@ -9,11 +9,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
-
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [cursor, setCursor] = useState<string>("");
   const [lastUpdatedField, setLastUpdatedField] = useState<string | null>(null);
@@ -34,12 +31,33 @@ const Contact: React.FC = () => {
     console.log(error);
 
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
 
     try {
-      const response = await axios.post(apiBaseUrl, data);
-
-      toast.success(toastMessages.successEmailSent.en);
+      emailjs
+        .send(
+          "service_5vklrxf",
+          "template_x1bw8wh",
+          {
+            from_name: name,
+            to_name: "Anshul Jha",
+            from_email: email,
+            to_email: "anshulwork1998@gmail.com",
+            message: message,
+          },
+          "f0lM1FJkRx-1rpNse"
+        )
+        .then(
+          () => {
+            toast.success(toastMessages.successEmailSent.en);
+            setName("");
+            setEmail("");
+            setMessage("");
+          },
+          (error) => {
+            console.log(error);
+            alert("Something went wrong. Please try again.");
+          }
+        );
     } catch (error) {
       console.log(error);
 
@@ -89,8 +107,6 @@ const Contact: React.FC = () => {
       setName(value);
     } else if (name === "email") {
       setEmail(value);
-    } else if (name === "subject") {
-      setSubject(value);
     } else if (name === "message") {
       setMessage(value);
     }
@@ -112,18 +128,14 @@ const Contact: React.FC = () => {
 
   const codeSnippet = `
 
-
 const [sender, setSender] = "${name}${
     lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
   }🚀";
 const [recipient, setRecipient] = "${email}${
     lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
   }📧";
-const [subject, setSubject] = \n"${subject}${
-    lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
-  }✨";
 const [message, setMessage] = 
-\`Hello, intrepid traveler! 👋\n
+\`Hello there! 👋\n
 Across the cosmos, a message for you:\n
 "${wordWrap(message, 40, " ")}${
     lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
@@ -197,8 +209,6 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                     ? name
                     : input.name === "email"
                     ? email
-                    : input.name === "subject"
-                    ? subject
                     : message
                 }
                 required
@@ -229,22 +239,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               onChange={handleInputChange}
               className={"bg-[--icewhite] dark-shadow"}
             />
-            <div className="privacy-checkbox flex gap-16">
-              <label
-                className="block w-2 h-2 cursor-pointer"
-                htmlFor="checkbox-label"
-              >
-                <input
-                  type="checkbox"
-                  required
-                  name="checkbox-label"
-                  id="checkbox-label"
-                />
-                <span className="checkbox"></span>
-              </label>
-              <p>{contactData.privacyOptIn.checkbox.en}</p>
-            </div>
-            <p>{contactData.privacyOptIn.description.en}</p>
+
             <Button
               value={contactData.button.value.en}
               iconSVG={contactData.icon}
