@@ -1,20 +1,20 @@
 import React from "react";
 
-interface Skill {
+type Skill = {
   title: string;
   hash: string;
-  icon?: any;
-  color?: any;
-}
+  icon: any;
+  color: any;
+};
 
-interface SkillCategory {
+type SkillCategory = {
   readonly skillsTitle: string;
   readonly skills: readonly Skill[];
-}
+};
 
-interface SkillSectionProps {
-  skillsData: readonly SkillCategory[];
-}
+type SkillSectionProps = {
+  skillsData: SkillCategory;
+};
 
 const SkillSection: React.FC<SkillSectionProps> = ({ skillsData }) => {
   const getSkillIconSrc = (skill: Skill) => {
@@ -47,9 +47,9 @@ const SkillSection: React.FC<SkillSectionProps> = ({ skillsData }) => {
         className={`absolute top-10 left-1/2 transform -translate-x-1/2 px-4 py-2  rounded-t-xl `}
       >
         <p className="font-black text-4xl">
-          <span className="text-[--orange]">&lt;</span>
+          <span className="text-[--purple]">&lt;</span>
           {skillsData.skillsTitle}
-          <span className="text-[--orange]">/&gt;</span>
+          <span className="text-[--purple]">/&gt;</span>
         </p>
       </div>
       {skillsData.skills.map((skill, index) => (

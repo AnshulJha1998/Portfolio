@@ -162,13 +162,13 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
               textAlign: "center",
             }}
           >
-            <p className="text-[--black] mb-6">
-              <span className="text-[--orange]">&lt;</span>
+            <p className="text-[--white] mb-6">
+              <span className="text-[--purple]">&lt;</span>
               {contactData.title.en}
-              <span className="text-[--orange]">/&gt;</span>
+              <span className="text-[--purple]">/&gt;</span>
             </p>
 
-            <h2 className="text-[--black] text-center">
+            <h2 className="text-[--white] text-center">
               {contactData.description.en}
             </h2>
           </motion.div>

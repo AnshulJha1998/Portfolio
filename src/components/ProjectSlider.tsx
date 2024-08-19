@@ -22,9 +22,6 @@ const ProjectSlider: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const notifyServerRequest = () => {
-    toast.info(toastMessages.loadingProject.en);
-  };
 
   return (
     <React.Fragment>
@@ -64,9 +61,9 @@ const ProjectSlider: React.FC = () => {
               }}
             >
               <p className="text-[--white] mt-16 mb-6">
-                <span className="text-[--orange]">&lt;</span>
+                <span className="text-[--purple]">&lt;</span>
                 {"Projects"}
-                <span className="text-[--orange]">/&gt;</span>
+                <span className="text-[--purple]">/&gt;</span>
               </p>
               <h2 className="text-[--white] mb-16">{"My Projects"}</h2>
             </motion.div>
@@ -90,7 +87,7 @@ const ProjectSlider: React.FC = () => {
                   key={index}
                   className="quote-outer-container bg-[--darkblue] text-[--white] flex flex-row justify-between  rounded-2xl p-20 text-left max-lg:hidden "
                 >
-                  <div className=" w-[55%] flex flex-col gap-12 justify-between ">
+                  <div className=" w-full flex flex-col gap-12 justify-between ">
                     <h2>{project.title}</h2>
 
                     <p className="text-white">{project.description_EN}</p>
@@ -114,29 +111,15 @@ const ProjectSlider: React.FC = () => {
                     <div className="buttons flex gap-10">
                       <Button
                         label="Live Demo"
-                        link={project.deploymenturl}
                         iconSVG={project.deploymenticon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
-                        onClick={notifyServerRequest}
-                      />
-                      <Button
-                        label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
+                        onClick={() => {
+                          window.open(project.deploymenturl, "_blank");
+                          toast.info(toastMessages.loadingProject.en);
+                        }}
                       />
                     </div>
-                  </div>
-
-                  <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
-                    <img
-                      src={project.image}
-                      alt={`${project.title}-project-mockup`}
-                      className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
-                      `}
-                    />
                   </div>
                 </SwiperSlide>
               ))}
@@ -147,25 +130,16 @@ const ProjectSlider: React.FC = () => {
                 className="bg-darkblue flex flex-col gap-10 w-[80%] h-full  border-lightblue border-[0.4rem] p-8 rounded-xl mb-10 min-[1024px]:hidden max-lg:w-[90%]"
               >
                 <h2 className="text-white">{project.title}</h2>
-                <img
-                  src={project.image}
-                  alt={project.image}
-                  className="h-[35vh] w-full object-cover object-top rounded-3xl"
-                />
+
                 <div className="buttons flex gap-10 max-lg:flex-col">
                   <Button
                     label="Live Demo"
-                    link={project.deploymenturl}
                     iconSVG={project.deploymenticon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
-                  />
-                  <Button
-                    label="Github Repository"
-                    link={project.githuburl}
-                    iconSVG={project.githubicon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
+                    onClick={() => {
+                      window.open(project.deploymenturl, "_blank");
+                    }}
                   />
                 </div>
                 <p className="text-white  max-lg:text-4xl">
@@ -199,7 +173,7 @@ const ProjectSlider: React.FC = () => {
         id="my-tooltip"
         style={{
           fontSize: "1.5rem",
-          backgroundColor: "var(--orange)",
+          backgroundColor: "var(--purple)",
         }}
       />
     </React.Fragment>

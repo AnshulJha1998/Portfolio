@@ -57,13 +57,13 @@ const NavBar: React.FC = () => {
       : "opacity-20 transition-all duration-700";
 
     const leftArrow = isLinkActive && (
-      <span className="text-[--orange] absolute -left-5 top-0 max-lg:hidden">
+      <span className="text-[--purple] absolute -left-5 top-0 max-lg:hidden">
         &lt;
       </span>
     );
 
     const rightArrow = isLinkActive && (
-      <span className="text-[--orange] absolute top-0 -right-10 max-lg:hidden">
+      <span className="text-[--purple] absolute top-0 -right-10 max-lg:hidden">
         /&gt;
       </span>
     );
@@ -101,7 +101,7 @@ const NavBar: React.FC = () => {
             <CustomNavLink key={index} link={link.hash} linkEn={link.en}>
               {link.en === activeSection ? (
                 <div>
-                  <span className="text-[--orange] absolute -left-5 top-0">
+                  <span className="text-[--purple] absolute -left-5 top-0">
                     &lt;
                   </span>
                   {link.en}

@@ -17,13 +17,13 @@ const TechStack: React.FC = () => {
       >
         <div className="title-container flex flex-col justify-center items-center p-32 w-1/2   gap-6 min-[1921px]:px-[55rem] max-lg:p-0  max-lg:w-full max-lg:items-start max-lg:py-16 ">
           <p className="font-black mb-6">
-            <span className="text-[--orange]">&lt;</span>Skills
-            <span className="text-[--orange]">/&gt;</span>
+            <span className="text-[--purple]">&lt;</span>Skills
+            <span className="text-[--purple]">/&gt;</span>
           </p>
           <h2>My TechStack and Skills</h2>
         </div>
         <div className="flex gap-40 justify-center max-lg:flex-col">
-          <div className="w-[77.33333%] max-lg:w-full">
+          <div className="w-[77.33333%] max-lg:w-full gap-12 flex flex-col">
             {skillsDataWeb.map((skillData, index) => {
               return (
                 <div key={`${skillData.skillsTitle}-${index}`}>
@@ -40,7 +40,7 @@ const TechStack: React.FC = () => {
         style={{
           fontSize: "1.5rem",
           zIndex: 10,
-          backgroundColor: "var(--orange)",
+          backgroundColor: "var(--purple)",
         }}
       />
     </React.Fragment>

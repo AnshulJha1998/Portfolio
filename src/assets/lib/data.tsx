@@ -1,37 +1,29 @@
-import canvaicon from "../../assets/icons/canvaicon.svg";
 import figmaicon from "../../assets/icons/figmaicon.svg";
 import htmlicon from "../../assets/icons/htmlicon.svg";
 import cssicon from "../../assets/icons/cssicon.svg";
 import javascripticon from "../../assets/icons/javascripticon.svg";
 import typescripticon from "../../assets/icons/typescripticon.svg";
 import reacticon from "../../assets/icons/reacticon.svg";
+import javaicon from "../../assets/icons/java.svg";
+import mysqlicon from "../../assets/icons/mysql.svg";
+import springboot from "../../assets/icons/spring.svg";
+import reactnativeicon from "../../assets/icons/react-native.svg";
 import nextjsicon from "../../assets/icons/nextjsicon.svg";
 import nodejsicon from "../../assets/icons/nodejsicon.svg";
 import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
 import mongodbicon from "../../assets/icons/mongoicon.svg";
-import vuejsicon from "../../assets/icons/vueicon.svg";
 import expressicon from "../../assets/icons/expressicon.svg";
 import sassscssicon from "../../assets/icons/sassicon.svg";
-import trelloicon from "../../assets/icons/trelloicon.svg";
 import apiicon from "../../assets/icons/apiicon.svg";
 import axiosicon from "../../assets/icons/axiosicon.svg";
-import spotifyicon from "../../assets/icons/spotifyicon.svg";
 import netlifyicon from "../../assets/icons/netlifyicon.svg";
 import rendericon from "../../assets/icons/rendericon.svg";
 import jwticon from "../../assets/icons/jwticon.svg";
-import tastyMockup from "../../assets/img/tasty_mockup.webp";
-import instorMockup from "../../assets/img/instor_mockup.webp";
-import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
 import profilepicture from "../img/me2.webp";
-import caricon from "../../assets/icons/car-icon.svg";
-import travelicon from "../../assets/icons/travel-icon.svg";
-import hardwareicon from "../../assets/icons/hardware-icon.svg";
 import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import { GoHome, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
-import Imprint from "../../components/Imprint";
-import Privacy from "../../components/Privacy";
 
 export const headerIntroData = {
   title: {
@@ -43,20 +35,11 @@ export const headerIntroData = {
   },
   buttons: [
     {
-      name: "Contact",
       label: {
-        en: "Contact me",
+        en: "My Resume",
       },
-      icon: FiMail,
+      icon: FiLink,
       color: "main-btn",
-    },
-    {
-      name: "Projects",
-      label: {
-        en: "My Projects",
-      },
-      icon: FiGithub,
-      color: "secondary-btn",
     },
   ],
   profilepicture: profilepicture,
@@ -64,9 +47,9 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
-    title: "Tasty App",
+    title: "My Unifinders",
     description_EN:
-      "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
+      "worked on an LMS project designed to help users find universities worldwide, which also features an integrated Admin panel and a CMS system for efficient content management and administration.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
@@ -74,14 +57,15 @@ export const projectsData = [
       { name: "REST Api", icon: apiicon },
       { name: "React", icon: reacticon },
       { name: "Figma", icon: figmaicon },
-      { name: "Canva", icon: canvaicon },
-      { name: "Netlify", icon: netlifyicon },
-      { name: "Trello", icon: trelloicon },
+      { name: "JWT & Bcrypt", icon: jwticon },
+      { name: "Axios", icon: axiosicon },
+      { name: "MongoDB", icon: mongodbicon },
+      { name: "Express", icon: expressiconwhite },
+      { name: "Node.js", icon: nodejsicon },
     ],
-    image: tastyMockup,
-    deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
-    githuburl: "https://github.com/AlpayC/Frontend_Abschlussprojekt_Tasty",
-    githubicon: FiGithub,
+
+    deploymenturl: "https://myunifinders.com/",
+
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -91,28 +75,20 @@ export const projectsData = [
     },
   },
   {
-    title: "Silentmoon",
+    title: "Block Coder",
     description_EN:
-      "A yoga and meditation app that we built as a team with React, MongoDB, Express and Node.js. My task as a gitmaster and backend developer was to program the backend with connection using a restful API and to model the database in MongoDB.",
+      "Paygold provides easy access, customisable dashboards finical activity tracking, an intuitive chat money transfer interface, an in-app wallet, and full compliance management monitoring, and reporting",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
       { name: "JavaScript", icon: javascripticon },
-      { name: "Spotify Api", icon: spotifyicon },
       { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
       { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
+      { name: "MySQL", icon: mysqlicon },
+      { name: "Netlify", icon: netlifyicon },
     ],
-    image: silentmoonMockup,
-    deploymenturl: "https://silentmoon-grpw.onrender.com/",
-    githuburl:
-      "https://github.com/AlpayC/Fullstack_Abschlussprojekt_SilentMoon",
-    githubicon: FiGithub,
+    deploymenturl: "https://block-coder-pearl.netlify.app/",
+
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -122,9 +98,9 @@ export const projectsData = [
     },
   },
   {
-    title: "Furniture Organizer",
+    title: "Funclass",
     description_EN:
-      "A furniture organizer app that we programmed as a duo team with React, MongoDB, Express and Node.js. As a gitmaster, I took over the connection of the frontend to the backend and the database modeling. The app is responsive and mobile-optimized.",
+      "developed an LMS project tailored for kids, incorporating gamification elements to enhance engagement and make learning more interactive and enjoyable.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
@@ -135,14 +111,35 @@ export const projectsData = [
       { name: "MongoDB", icon: mongodbicon },
       { name: "Express", icon: expressiconwhite },
       { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
+      { name: "Netlify", icon: netlifyicon },
+
       { name: "Render", icon: rendericon },
-      { name: "Trello", icon: trelloicon },
     ],
-    image: instorMockup,
-    deploymenturl: "https://mern-haushaltsbuch.onrender.com/",
-    githuburl: "https://github.com/AlpayC/Furniture_MERN",
-    githubicon: FiGithub,
+    deploymenturl: "https://www.getfunclass.com/",
+
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "My Sister's Portfolio",
+    description_EN:
+      "I created a portfolio for my sister, who is in the interior design field, showcasing her creativity and expertise in transforming spaces with aesthetic and functional designs.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "Axios", icon: axiosicon },
+      { name: "Netlify", icon: netlifyicon },
+      { name: "Render", icon: rendericon },
+    ],
+    deploymenturl: "https://enchanting-rolypoly-8c4e00.netlify.app/",
+
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -152,12 +149,6 @@ export const projectsData = [
     },
   },
 ] as const;
-
-export const liveTickerData = {
-  content: {
-    en: "More Projects on Github",
-  },
-} as const;
 
 export const skillsDataWeb = [
   {
@@ -194,11 +185,12 @@ export const skillsDataWeb = [
         color: "#61DAFB",
       },
       {
-        title: "Node.js",
-        hash: "#Node.js",
-        icon: nodejsicon,
-        color: "#339933",
+        title: "React-Native",
+        hash: "#React-Native",
+        icon: reactnativeicon,
+        color: "#61DAFB",
       },
+
       {
         title: "Next.js",
         hash: "#Next.js",
@@ -211,24 +203,7 @@ export const skillsDataWeb = [
         icon: tailwindcssicon,
         color: "#38B2AC",
       },
-      {
-        title: "MongoDB",
-        hash: "#MongoDB",
-        icon: mongodbicon,
-        color: "#449C45",
-      },
-      {
-        title: "Vue.js",
-        hash: "#Vue.js",
-        icon: vuejsicon,
-        color: "#4FC08D",
-      },
-      {
-        title: "Express",
-        hash: "#Express",
-        icon: [expressicon, expressiconwhite],
-        color: ["#000000", "#FFFFFF"],
-      },
+
       {
         title: "SASS/SCSS",
         hash: "#SASS/SCSS",
@@ -255,8 +230,8 @@ export const skillsDataWeb = [
       {
         title: "MYSQL",
         hash: "#MYSQL",
-        icon: mongodbicon,
-        color: "#449C45",
+        icon: mysqlicon,
+        color: "white",
       },
 
       {
@@ -268,14 +243,14 @@ export const skillsDataWeb = [
       {
         title: "Java",
         hash: "#Java",
-        icon: [expressicon, expressiconwhite],
-        color: ["#000000", "#FFFFFF"],
+        icon: javaicon,
+        color: "Orange",
       },
       {
         title: "Spring Boot",
         hash: "#Spring Boot",
-        icon: [expressicon, expressiconwhite],
-        color: ["#000000", "#FFFFFF"],
+        icon: springboot,
+        color: "#449C45",
       },
     ],
   },
@@ -286,11 +261,6 @@ export const navLinks = [
   { en: "Skills", hash: "#skills", icon: GoStack },
   { en: "Projects", hash: "#projects", icon: GoProject },
   { en: "Contact", hash: "#contact", icon: GoMail },
-] as const;
-
-export const FooterLinks = [
-  { en: "Imprint", hash: "#imprint", data: <Imprint /> },
-  { en: "Privacy", hash: "#privacy", data: <Privacy /> },
 ] as const;
 
 export const socialLinks = [
@@ -305,42 +275,6 @@ export const socialLinks = [
     altimgname: "github",
   },
 ] as const;
-
-export const quotesData = [
-  {
-    en: `"It's not at all important to get it right the first time. It's vitally important to get it right the last time."`,
-    author: "Andrew Hunt",
-  },
-  {
-    en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
-  },
-] as const;
-
-export const aboutMeData = {
-  title_EN: "About me",
-  description_EN: "A few code snippets about me",
-
-  paragraphs_EN: [
-    {
-      title: "The Circuits of My Heart",
-      description:
-        "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
-      icon: hardwareicon,
-    },
-    {
-      title: "On the Fast Lane of Life",
-      description:
-        "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
-      icon: caricon,
-    },
-    {
-      title: "The Joy of Discovery as a Life Motto",
-      description:
-        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
-      icon: travelicon,
-    },
-  ],
-};
 
 export const contactData = {
   title: {
@@ -477,7 +411,7 @@ export const heightStyles: Record<string, { heights: [string, string] }> = {
 export const spaceStyles: Record<string, React.CSSProperties> = {
   "outer-right-to-inner-left": {
     marginTop: "-6rem",
-    width: "100%",
+    width: "51.2%",
   },
   "outer-left-to-inner-right": {
     marginTop: "-6rem",
@@ -509,7 +443,7 @@ export const spaceStyles: Record<string, React.CSSProperties> = {
 
 export const widthStyles: Record<string, { widths: [string, string] }> = {
   "outer-right-to-inner-left": {
-    widths: ["74.45%", "74.45%"],
+    widths: ["50.1%", "74.45%"],
   },
   "outer-left-to-inner-right": {
     widths: ["75%", "75%"],

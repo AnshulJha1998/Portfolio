@@ -3,12 +3,11 @@ import Button from "./Button";
 import RadialGradient from "./RadialGradient";
 import { headerIntroData } from "../assets/lib/data";
 import { useSectionInView } from "../assets/lib/hooks";
-import { useActiveSectionContext } from "../context/active-section-context";
 import { BsMouse } from "react-icons/bs";
+import resume from "../assets/pdf/Anshul Jha 3 YoE new.pdf";
 
 const HeaderIntro: React.FC = () => {
   const { ref } = useSectionInView("Home", 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -23,7 +22,7 @@ const HeaderIntro: React.FC = () => {
         alt={headerIntroData.profilepicture}
         className="w-1/6 drop-shadow-2xl rounded-full shadow-2xl avatar-img max-lg:w-3/4"
       />
-      <h1>
+      <h1 className="text-[--purple]">
         {headerIntroData.title.en}
         <span className="wave text-7xl">&#128075;&#127997;</span>
       </h1>
@@ -38,11 +37,11 @@ const HeaderIntro: React.FC = () => {
             key={index}
             label={button.label.en}
             iconSVG={button.icon}
-            link={`#${button.name.toLocaleLowerCase()}`}
             buttoncolor={button.color}
             onClick={() => {
-              setActiveSection(button.name);
-              setTimeOfLastClick(Date.now());
+              if (button.label.en.toLowerCase().includes("resume")) {
+                window.open(resume, "_blank");
+              }
             }}
           />
         ))}

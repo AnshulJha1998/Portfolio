@@ -41,7 +41,7 @@ const Divider: React.FC<DividerProps> = ({
   return (
     <div style={directionStyle} className="relative">
       <div
-        className="flex justify-end mb-10 "
+        className="flex justify-end mb-10"
         style={{ height: heightStyle?.heights[0], ...spaceStyle }}
       >
         <div

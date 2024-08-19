@@ -38,7 +38,7 @@ const Home: React.FC = () => {
             />
 
             <ProjectSlider />
-            <div className="relative -mb-24 pb-32 -mt-5">
+            <div className="relative -mb-24 pb-32 sm:mt-[10.75rem] mt-[5.75rem]">
               <Divider
                 thickness="0.25rem"
                 direction="middle"
