@@ -4,7 +4,7 @@ import RadialGradient from "./RadialGradient";
 import { headerIntroData } from "../assets/lib/data";
 import { useSectionInView } from "../assets/lib/hooks";
 import { BsMouse } from "react-icons/bs";
-import resume from "../assets/pdf/anshul_resume_react_native.pdf";
+import resume from "../assets/pdf/resume.pdf";
 
 const HeaderIntro: React.FC = () => {
   const { ref } = useSectionInView("Home", 0.5);
