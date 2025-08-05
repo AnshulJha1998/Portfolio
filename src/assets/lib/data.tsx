@@ -29,9 +29,9 @@ export const headerIntroData = {
   title: {
     en: "Hi, I'm Anshul",
   },
-  subtitle: "React and React Native Developer",
+  subtitle: "Full Stack Developer",
   description: {
-    en: "Accomplished full-stack developer with 3 years of experience, specializing in the MERN stack, React Native and Java Spring Boot, delivering robust and scalable web applications across diverse domains.",
+    en: "Accomplished full-stack developer with 3.5 + years of experience, specializing in the MERN stack, React Native and Java Spring Boot, delivering robust and scalable web applications across diverse domains.",
   },
   buttons: [
     {
@@ -49,7 +49,7 @@ export const projectsData = [
   {
     title: "My Unifinders",
     description_EN:
-      "worked on an LMS project designed to help users find universities worldwide, which also features an integrated Admin panel and a CMS system for efficient content management and administration.",
+      "An LMS project designed to help users find universities worldwide, which also features an integrated Admin panel and a CMS system for efficient content management and administration.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
@@ -77,7 +77,7 @@ export const projectsData = [
   {
     title: "Block Coder",
     description_EN:
-      "Paygold provides easy access, customisable dashboards finical activity tracking, an intuitive chat money transfer interface, an in-app wallet, and full compliance management monitoring, and reporting",
+      "Paygold provides easy access, customizable dashboards finical activity tracking, an intuitive chat money transfer interface, an in-app wallet, and full compliance management monitoring, and reporting",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
@@ -86,6 +86,7 @@ export const projectsData = [
       { name: "Axios", icon: axiosicon },
       { name: "MySQL", icon: mysqlicon },
       { name: "Netlify", icon: netlifyicon },
+      { name: "Java", icon: javaicon },
     ],
     deploymenturl: "https://block-coder-pearl.netlify.app/",
 
@@ -139,6 +140,122 @@ export const projectsData = [
       { name: "Render", icon: rendericon },
     ],
     deploymenturl: "https://enchanting-rolypoly-8c4e00.netlify.app/",
+
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "Alfred",
+    description_EN:
+      "A older version of Sonnys Carwash application mainly focusing on chemicals usage, waste management and sites along with employees management and internal sensitive information.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "Axios", icon: axiosicon },
+      { name: "Java", icon: javaicon },
+      { name: "Spring-Boot", icon: springboot },
+    ],
+    deploymenturl: "https://alfred.hydraflexinc.com/",
+
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "EverLearn Campus",
+    description_EN:
+      "Social media application for elder people which has firebase support , uses Quill text editor for posting stuff, auth systems and other features of a social media application.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "Axios", icon: axiosicon },
+      { name: "Node Js", icon: nodejsicon },
+    ],
+    deploymenturl: "https://www.everlearncampus.com/",
+
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "Osttra CRDS",
+    description_EN:
+      "ERP based post trade application that has legacy data for business organisations and users along with complex data mapping for big firms like JP Morgan and Goldman Sachs etc.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "Java", icon: javaicon },
+      { name: "Spring-Boot", icon: springboot },
+      { name: "JWT", icon: jwticon },
+    ],
+    deploymenturl: "https://osttra.com/",
+
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "Sonnysdirect Quivio Aqualab",
+    description_EN:
+      "This holds a QA version only since this is still under development. I was working on a module called Aqualab and CRM for complex configs and enhancement on inherited features from Alfred.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "Axios", icon: axiosicon },
+      { name: "Java", icon: javaicon },
+      { name: "Spring-Boot", icon: springboot },
+      { name: "Node Js", icon: nodejsicon },
+    ],
+    deploymenturl:
+      "https://sonnysdirect.com/parts/p/SD_AQUA_LAB?srsltid=AfmBOorpCmyD_KA78Ws4WlwzOCeFeRisZ6YqUX-lcIBtqFqhJB12vMwR",
+
+    deploymenticon: FiLink,
+    colors: {
+      main: "main-btn",
+      second: "secondary-btn",
+      icon: "white",
+      projectcolor: "#E3964A",
+    },
+  },
+  {
+    title: "Sales Advisory Tool",
+    description_EN:
+      "A React PWA made for sales representatives of Sonnysdirect (Quivio/ACE) mainly for car wash plans which is integrated with audio recording, Siro.ai deeplinking, presentations and complex data for different sites across United States.",
+    technologies: [
+      { name: "Html", icon: htmlicon },
+      { name: "CSS", icon: cssicon },
+      { name: "JavaScript", icon: javascripticon },
+      { name: "React", icon: reacticon },
+      { name: "Axios", icon: axiosicon },
+      { name: "Java", icon: javaicon },
+      { name: "Spring-Boot", icon: springboot },
+    ],
+    deploymenturl: "https://sat.sonnyscontrols.com",
 
     deploymenticon: FiLink,
     colors: {
