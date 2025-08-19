@@ -1,10 +1,8 @@
 import React from "react";
-import Button from "./Button";
 import RadialGradient from "./RadialGradient";
 import { headerIntroData } from "../assets/lib/data";
 import { useSectionInView } from "../assets/lib/hooks";
 import { BsMouse } from "react-icons/bs";
-import resume from "../assets/pdf/resume.pdf";
 
 const HeaderIntro: React.FC = () => {
   const { ref } = useSectionInView("Home", 0.5);
@@ -31,21 +29,6 @@ const HeaderIntro: React.FC = () => {
         {headerIntroData.description.en}
       </p>
 
-      <div className="button-container flex items-center justify-center mr-8 gap-10 mb-12 max-lg:flex-col max-lg:items-center">
-        {headerIntroData.buttons.map((button, index) => (
-          <Button
-            key={index}
-            label={button.label.en}
-            iconSVG={button.icon}
-            buttoncolor={button.color}
-            onClick={() => {
-              if (button.label.en.toLowerCase().includes("resume")) {
-                window.open(resume, "_blank");
-              }
-            }}
-          />
-        ))}
-      </div>
       <div className="scroll-down-container animate-bounce flex gap-6">
         <BsMouse className="text-[2.6rem]" />
       </div>

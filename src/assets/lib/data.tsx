@@ -31,17 +31,9 @@ export const headerIntroData = {
   },
   subtitle: "Full Stack Developer",
   description: {
-    en: "Accomplished full-stack developer with 3.5 + years of experience, specializing in the MERN stack, React Native and Java Spring Boot, delivering robust and scalable web applications across diverse domains.",
+    en: "Accomplished full-stack developer with experience on domains like Post-trade, LMS, CRM, UMS and Robotics specializing in the MERN stack, React Native and Java Spring Boot, delivering robust and scalable web applications across other diverse domains as well.",
   },
-  buttons: [
-    {
-      label: {
-        en: "My Resume",
-      },
-      icon: FiLink,
-      color: "main-btn",
-    },
-  ],
+
   profilepicture: profilepicture,
 } as const;
 
