@@ -374,7 +374,7 @@ export const navLinks = [
 
 export const socialLinks = [
   {
-    link: "www.linkedin.com/in/anshul-jha-86b963227",
+    link: "https://www.linkedin.com/in/anshul-jha-86b963227/",
     icon: FiLinkedin,
     altimgname: "linkedin",
   },
